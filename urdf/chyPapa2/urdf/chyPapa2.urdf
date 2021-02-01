@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.4.4-24-g24328f6  Build Version: 1.5.7084.36479
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="chyPapa2">
+  <link
+    name="Link_Body">
+    <inertial>
+      <origin
+        xyz="0.0103110622754226 -0.138333813435703 -0.00633427200512993"
+        rpy="0 0 0" />
+      <mass
+        value="0.140972114032924" />
+      <inertia
+        ixx="0.000172858210708355"
+        ixy="-9.20364029032314E-08"
+        ixz="-1.60625193941857E-06"
+        iyy="0.000238776777529016"
+        iyz="-1.46977761927676E-07"
+        izz="0.000396584509314805" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_Shoulder">
+    <inertial>
+      <origin
+        xyz="-0.0274247665425242 -0.00816227985534069 0.0125762828596184"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207864363086098" />
+      <inertia
+        ixx="6.27146358863494E-06"
+        ixy="3.91384833154346E-08"
+        ixz="-1.74281855565268E-07"
+        iyy="6.22523670847366E-06"
+        iyz="-2.24464499683624E-07"
+        izz="1.02843302670418E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Shoulder_Body"
+    type="revolute">
+    <origin
+      xyz="-0.024262 -0.21097 0.0042832"
+      rpy="-3.1089 0 1.5708" />
+    <parent
+      link="Link_Body" />
+    <child
+      link="Link_Shoulder" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Arm">
+    <inertial>
+      <origin
+        xyz="-0.0710876124947527 0.0340358908842903 -0.0177604221817192"
+        rpy="0 0 0" />
+      <mass
+        value="0.108265195096751" />
+      <inertia
+        ixx="4.83910286989676E-05"
+        ixy="5.63954736871045E-05"
+        ixz="7.98486978154872E-06"
+        iyy="0.000139263714036457"
+        iyz="-3.82803849449154E-06"
+        izz="0.000163044159957564" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Arm_Shoulder"
+    type="revolute">
+    <origin
+      xyz="-0.039 -0.0050373 0.025"
+      rpy="1.5708 1.0539 -3.1416" />
+    <parent
+      link="Link_Shoulder" />
+    <child
+      link="Link_Arm" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Hand">
+    <inertial>
+      <origin
+        xyz="0.0536175359968078 0.0739272398889915 0.0110737358724703"
+        rpy="0 0 0" />
+      <mass
+        value="0.0420735853495988" />
+      <inertia
+        ixx="6.79633343581309E-06"
+        ixy="-6.55893416894574E-06"
+        ixz="1.89928053845189E-06"
+        iyy="2.45724016984148E-05"
+        iyz="6.24920220189582E-07"
+        izz="2.83575795096436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Hand_Arm"
+    type="revolute">
+    <origin
+      xyz="-0.13 0 -0.031984"
+      rpy="3.1416 0 2.8554" />
+    <parent
+      link="Link_Arm" />
+    <child
+      link="Link_Hand" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Shoulder_lf">
+    <inertial>
+      <origin
+        xyz="0.0297444649113038 -0.0103661778761098 0.0113168142585662"
+        rpy="0 0 0" />
+      <mass
+        value="0.024381282517391" />
+      <inertia
+        ixx="6.47635682118491E-06"
+        ixy="-1.78209928375872E-07"
+        ixz="5.84885132806064E-07"
+        iyy="6.88016866534127E-06"
+        iyz="-8.48693360788403E-07"
+        izz="1.06252181988618E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Shoulder_Body_lf"
+    type="revolute">
+    <origin
+      xyz="0.044738 -0.21111 0.0042832"
+      rpy="3.1357 0 -1.5708" />
+    <parent
+      link="Link_Body" />
+    <child
+      link="Link_Shoulder_lf" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Arm_lf">
+    <inertial>
+      <origin
+        xyz="-0.07869107134756 -0.00442784469741125 -0.0187810440052837"
+        rpy="0 0 0" />
+      <mass
+        value="0.108265195096751" />
+      <inertia
+        ixx="2.18665393901229E-05"
+        ixy="-8.15777841067259E-06"
+        ixz="8.84132248933236E-06"
+        iyy="0.000165788203345302"
+        iyz="4.92991666485187E-07"
+        izz="0.000163044159957564" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Arm_Shoulder_lf"
+    type="revolute">
+    <origin
+      xyz="0.036 -0.0043109 0.024951"
+      rpy="-1.434 1.4843 0.13633" />
+    <parent
+      link="Link_Shoulder_lf" />
+    <child
+      link="Link_Arm_lf" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Hand_lf">
+    <inertial>
+      <origin
+        xyz="0.0382235851535002 -0.037834395297675 0.0117025057426633"
+        rpy="0 0 0" />
+      <mass
+        value="0.0420735853495988" />
+      <inertia
+        ixx="1.26222853010981E-05"
+        ixy="1.061321913219E-05"
+        ixz="1.59781337086335E-06"
+        iyy="1.87464498331299E-05"
+        iyz="-1.20199179582653E-06"
+        izz="2.83575795096436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Hand_Arm_lf"
+    type="revolute">
+    <origin
+      xyz="-0.13 0 -0.032376"
+      rpy="3.1416 0 2.6143" />
+    <parent
+      link="Link_Arm_lf" />
+    <child
+      link="Link_Hand_lf" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Shoulder_re">
+    <inertial>
+      <origin
+        xyz="-0.0252555849108747 -0.0102321643187586 0.0114381270782385"
+        rpy="0 0 0" />
+      <mass
+        value="0.024381282517391" />
+      <inertia
+        ixx="6.47635682902833E-06"
+        ixy="-1.71308517453452E-07"
+        ixz="5.86943623501042E-07"
+        iyy="6.86069697624157E-06"
+        iyz="-8.04349947667647E-07"
+        izz="1.0644689880118E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder_re.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder_re.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Shoulder_Body_re"
+    type="revolute">
+    <origin
+      xyz="-0.024189 -0.010105 0.0045518"
+      rpy="-2.8097 0 1.5708" />
+    <parent
+      link="Link_Body" />
+    <child
+      link="Link_Shoulder_re" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Arm_re">
+    <inertial>
+      <origin
+        xyz="-0.0788155464015625 -1.28029117703737E-05 -0.0227977426419542"
+        rpy="0 0 0" />
+      <mass
+        value="0.108265195096751" />
+      <inertia
+        ixx="2.14056382437845E-05"
+        ixy="-5.70861722950911E-08"
+        ixz="8.85505589058663E-06"
+        iyy="0.00016624910449164"
+        iyz="-3.05257037534542E-09"
+        izz="0.000163044159957564" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm_re.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm_re.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Arm_Shoulder_re"
+    type="revolute">
+    <origin
+      xyz="-0.016 0 0.025"
+      rpy="-1.5708 1.5389 0" />
+    <parent
+      link="Link_Shoulder_re" />
+    <child
+      link="Link_Arm_re" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Hand_re">
+    <inertial>
+      <origin
+        xyz="0.0526382833749993 -6.93889390390723E-17 0.00897198634715779"
+        rpy="0 0 0" />
+      <mass
+        value="0.0420735853495988" />
+      <inertia
+        ixx="4.63824751744344E-06"
+        ixy="2.62116992505803E-20"
+        ixz="1.99944788512829E-06"
+        iyy="2.67304876167845E-05"
+        iyz="-2.57937006310257E-21"
+        izz="2.83575795096436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand_re.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand_re.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Hand_Arm_re"
+    type="revolute">
+    <origin
+      xyz="-0.13 0 -0.039123"
+      rpy="-3.1416 0 -3.1308" />
+    <parent
+      link="Link_Arm_re" />
+    <child
+      link="Link_Hand_re" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Shoulder_le">
+    <inertial>
+      <origin
+        xyz="0.00857528317052155 -0.0271622797724547 -0.0124237177123403"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207864363086098" />
+      <inertia
+        ixx="6.27146359614103E-06"
+        ixy="3.91384878570594E-08"
+        ixz="-1.74281939934302E-07"
+        iyy="6.22523670823709E-06"
+        iyz="-2.24464498340633E-07"
+        izz="1.02843302597723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder_le.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Shoulder_le.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Shoulder_Body_le"
+    type="revolute">
+    <origin
+      xyz="0.044811 -0.010105 0.0045518"
+      rpy="0 0.54918 0" />
+    <parent
+      link="Link_Body" />
+    <child
+      link="Link_Shoulder_le" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Arm_le">
+    <inertial>
+      <origin
+        xyz="-0.0788155464015625 -1.2802911770346E-05 -0.022666833245342"
+        rpy="0 0 0" />
+      <mass
+        value="0.108265195096751" />
+      <inertia
+        ixx="2.14056382437845E-05"
+        ixy="-5.70861722950318E-08"
+        ixz="8.85505589058666E-06"
+        iyy="0.00016624910449164"
+        iyz="-3.05257037533477E-09"
+        izz="0.000163044159957564" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm_le.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Arm_le.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Arm_Shoulder_le"
+    type="revolute">
+    <origin
+      xyz="0 -0.019 -0.025"
+      rpy="1.5708 -1.2852 -1.5708" />
+    <parent
+      link="Link_Shoulder_le" />
+    <child
+      link="Link_Arm_le" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_Hand_le">
+    <inertial>
+      <origin
+        xyz="0.00763828337499933 -1.04083408558608E-17 0.0110950761202187"
+        rpy="0 0 0" />
+      <mass
+        value="0.0420735853495988" />
+      <inertia
+        ixx="4.63824751744344E-06"
+        ixy="2.6112437577074E-20"
+        ixz="1.99944788512829E-06"
+        iyy="2.67304876167845E-05"
+        iyz="-2.53966539370003E-21"
+        izz="2.83575795096436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand_le.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa2/meshes/Link_Hand_le.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Hand_Arm_le"
+    type="revolute">
+    <origin
+      xyz="-0.20495 -0.062371 0.051881"
+      rpy="0.0046643 0.21725 -2.8343" />
+    <parent
+      link="Link_Arm_le" />
+    <child
+      link="Link_Hand_le" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>
