@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.4.4-24-g24328f6  Build Version: 1.5.7084.36479
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="chyPapa4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000487178621262226 0.00309268435084003 0.252099913027294"
+        rpy="0 0 0" />
+      <mass
+        value="0.322564149559201" />
+      <inertia
+        ixx="0.000359146302065018"
+        ixy="-1.60625193941826E-06"
+        ixz="1.99175732926455E-06"
+        iyy="0.000559624631238044"
+        iyz="1.46977761927734E-07"
+        izz="0.000468722962125827" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_Shoulder_fl">
+    <inertial>
+      <origin
+        xyz="0.00685807239713297 0.00857459254063112 -0.0474254253257159"
+        rpy="0 0 0" />
+      <mass
+        value="0.100243096491449" />
+      <inertia
+        ixx="2.42612831517242E-05"
+        ixy="-1.86088562719443E-06"
+        ixz="-5.53068094423271E-07"
+        iyy="3.36320922407044E-05"
+        iyz="5.03943629599621E-06"
+        izz="2.70772599440709E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa4/meshes/Link_Shoulder_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa4/meshes/Link_Shoulder_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Shoulder_Body_fl"
+    type="continuous">
+    <origin
+      xyz="-0.03504 -0.30624 0.013326"
+      rpy="1.123 0.29832 3.0894" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_Shoulder_fl" />
+    <axis
+      xyz="0.049886 -0.41855 0.90682" />
+    <limit
+      lower="-0.5"
+      upper="1.5"
+      effort="100"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>
