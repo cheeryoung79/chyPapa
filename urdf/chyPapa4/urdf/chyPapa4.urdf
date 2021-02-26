@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
-     Commit Version: 1.4.4-24-g24328f6  Build Version: 1.5.7084.36479
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="chyPapa4">
@@ -8,17 +8,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="0.020248 0.018724 0.022774"
+        xyz="0.0202481629823698 0.0187243756673782 0.0227744974719993"
         rpy="0 0 0" />
       <mass
-        value="0.042074" />
+        value="0.0420735853495988" />
       <inertia
-        ixx="5.8864E-06"
-        ixy="1.9421E-06"
-        ixz="5.1006E-06"
-        iyy="2.8358E-05"
-        iyz="-4.7525E-07"
-        izz="2.5482E-05" />
+        ixx="5.88637369495906E-06"
+        ixy="1.94214625037226E-06"
+        ixz="5.10059645854758E-06"
+        iyy="2.83575795096436E-05"
+        iyz="-4.75247080484324E-07"
+        izz="2.54823614392689E-05" />
     </inertial>
     <visual>
       <origin
@@ -48,17 +48,17 @@
     name="Link_Shoulder_fl">
     <inertial>
       <origin
-        xyz="0.00011744 0.0012019 0.01"
+        xyz="-0.00120189420024862 -0.000117441816613433 -0.0100002220463185"
         rpy="0 0 0" />
       <mass
-        value="0.034142" />
+        value="0.0341422557519" />
       <inertia
-        ixx="6.1579E-06"
-        ixy="-8.4359E-08"
-        ixz="2.8079E-11"
-        iyy="5.8407E-06"
-        iyz="-1.5388E-10"
-        izz="9.772E-06" />
+        ixx="5.84073892863087E-06"
+        ixy="-8.43586991661572E-08"
+        ixz="-1.53883232331005E-10"
+        iyy="6.15792129214538E-06"
+        iyz="2.80792760151049E-11"
+        izz="9.77204160815347E-06" />
     </inertial>
     <visual>
       <origin
@@ -89,13 +89,13 @@
     type="revolute">
     <origin
       xyz="-0.040882 -0.025286 -0.0003707"
-      rpy="1.5708 0 0" />
+      rpy="1.5708 1.5708 0" />
     <parent
       link="base_link" />
     <child
       link="Link_Shoulder_fl" />
     <axis
-      xyz="0 0 1" />
+      xyz="-1 0 0" />
     <limit
       lower="-1.5"
       upper="1.5"
