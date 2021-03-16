@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="chyPapa5">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00036135 0.0028694 0.2521"
+        rpy="0 0 0" />
+      <mass
+        value="0.32256" />
+      <inertia
+        ixx="0.00035915"
+        ixy="-1.6063E-06"
+        ixz="1.9918E-06"
+        iyy="0.00055962"
+        iyz="1.4698E-07"
+        izz="0.00046872" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa5/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa5/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_Shoulder">
+    <inertial>
+      <origin
+        xyz="-0.011875 -0.0098127 0.026489"
+        rpy="0 0 0" />
+      <mass
+        value="0.10024" />
+      <inertia
+        ixx="2.5834E-05"
+        ixy="4.5392E-06"
+        ixz="9.9656E-08"
+        iyy="3.4716E-05"
+        iyz="-7.2325E-07"
+        izz="2.4421E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa5/meshes/Link_Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa5/meshes/Link_Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Shoulder"
+    type="revolute">
+    <origin
+      xyz="-0.034841 -0.326 0.013371"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_Shoulder" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.5"
+      upper="1.5"
+      effort="100"
+      velocity="0" />
+  </joint>
+</robot>
