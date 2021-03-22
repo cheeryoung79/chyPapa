@@ -8,17 +8,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.00036135 0.0028694 0.2521"
+        xyz="0.00018262 -0.00036446 -0.011879"
         rpy="0 0 0" />
       <mass
-        value="0.32256" />
+        value="0.30228" />
       <inertia
-        ixx="0.00035915"
-        ixy="-1.6063E-06"
-        ixz="1.9918E-06"
-        iyy="0.00055962"
-        iyz="1.4698E-07"
-        izz="0.00046872" />
+        ixx="0.00050827"
+        ixy="1.672E-06"
+        ixz="-5.0357E-08"
+        iyy="0.00035288"
+        iyz="-1.673E-09"
+        izz="0.00062639" />
     </inertial>
     <visual>
       <origin
@@ -45,20 +45,20 @@
     </collision>
   </link>
   <link
-    name="Link_Shoulder">
+    name="Link_Shoulder_le">
     <inertial>
       <origin
-        xyz="-0.011875 -0.0098127 0.026489"
+        xyz="-0.01228 -0.01264 -0.023521"
         rpy="0 0 0" />
       <mass
         value="0.10024" />
       <inertia
-        ixx="2.5834E-05"
-        ixy="4.5392E-06"
-        ixz="9.9656E-08"
-        iyy="3.4716E-05"
-        iyz="-7.2325E-07"
-        izz="2.4421E-05" />
+        ixx="3.6483E-05"
+        ixy="7.8808E-07"
+        ixz="1.2662E-06"
+        iyy="2.4436E-05"
+        iyz="-2.9444E-07"
+        izz="2.4052E-05" />
     </inertial>
     <visual>
       <origin
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder.STL" />
+          filename="package://chyPapa5/meshes/Link_Shoulder_le.STL" />
       </geometry>
       <material
         name="">
@@ -80,22 +80,22 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder.STL" />
+          filename="package://chyPapa5/meshes/Link_Shoulder_le.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint_Shoulder"
+    name="Joint_Shoulder_le"
     type="revolute">
     <origin
-      xyz="-0.034841 -0.326 0.013371"
-      rpy="1.5708 0 0" />
+      xyz="-0.071696 -0.03752 -0.019059"
+      rpy="-1.5708 1.5707 -1.5489" />
     <parent
       link="base_link" />
     <child
-      link="Link_Shoulder" />
+      link="Link_Shoulder_le" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
       lower="-0.5"
       upper="1.5"
