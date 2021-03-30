@@ -8,17 +8,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="0.000174599620408043 0.000368370901055128 0.0118786126884624"
+        xyz="-1.4383E-17 0.00036944 0.011864"
         rpy="0 0 0" />
       <mass
-        value="0.302284486397825" />
+        value="0.30153" />
       <inertia
-        ixx="0.000508264269609247"
-        ixy="1.72818091879255E-06"
-        ixz="5.03815150448836E-08"
-        iyy="0.000352882150375563"
-        iyz="-5.70897963732037E-10"
-        izz="0.000626394253730004" />
+        ixx="0.00050692"
+        ixy="1.7197E-06"
+        ixz="4.6735E-10"
+        iyy="0.00035267"
+        iyz="2.8624E-09"
+        izz="0.00062494" />
     </inertial>
     <visual>
       <origin
@@ -27,46 +27,6 @@
       <geometry>
         <mesh
           filename="package://chyPapa5/meshes/base_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://chyPapa5/meshes/base_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <link
-    name="Link_Shoulder_le">
-    <inertial>
-      <origin
-        xyz="-0.011315 -0.012994 -0.026142"
-        rpy="0 0 0" />
-      <mass
-        value="0.09716" />
-      <inertia
-        ixx="3.0377E-05"
-        ixy="2.8795E-06"
-        ixz="2.0603E-06"
-        iyy="2.2499E-05"
-        iyz="3.1701E-07"
-        izz="2.2025E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder_le.STL" />
       </geometry>
       <material
         name="">
@@ -80,25 +40,65 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder_le.STL" />
+          filename="package://chyPapa5/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_Shoulder_rf">
+    <inertial>
+      <origin
+        xyz="-0.0124 0.012221 0.029708"
+        rpy="0 0 0" />
+      <mass
+        value="0.09598" />
+      <inertia
+        ixx="3.2658E-05"
+        ixy="-1.2243E-06"
+        ixz="-1.4856E-06"
+        iyy="2.0828E-05"
+        iyz="-3.4986E-07"
+        izz="2.1794E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa5/meshes/Link_Shoulder_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chyPapa5/meshes/Link_Shoulder_rf.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint_Shoulder_le"
+    name="Joint_Shoulder_rf"
     type="revolute">
     <origin
-      xyz="-0.0725 -0.019059 0.035943"
-      rpy="-1.5708 -0.00010338 -1.5708" />
+      xyz="0.0685 -0.019304 -0.034561"
+      rpy="-1.5708 0.034331 -1.5708" />
     <parent
       link="base_link" />
     <child
-      link="Link_Shoulder_le" />
+      link="Link_Shoulder_rf" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="-0.5"
-      upper="1.5"
+      lower="1.5"
+      upper="0.5"
       effort="100"
       velocity="0" />
   </joint>
