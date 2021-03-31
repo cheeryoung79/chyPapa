@@ -8,16 +8,16 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-1.4383E-17 0.00036944 0.011864"
+        xyz="-0.00036944 2.8765E-18 0.011864"
         rpy="0 0 0" />
       <mass
         value="0.30153" />
       <inertia
-        ixx="0.00050692"
-        ixy="1.7197E-06"
-        ixz="4.6735E-10"
-        iyy="0.00035267"
-        iyz="2.8624E-09"
+        ixx="0.00035267"
+        ixy="-1.7197E-06"
+        ixz="-2.8624E-09"
+        iyy="0.00050692"
+        iyz="4.6735E-10"
         izz="0.00062494" />
     </inertial>
     <visual>
@@ -48,17 +48,17 @@
     name="Link_Shoulder_rf">
     <inertial>
       <origin
-        xyz="-0.0124 0.012221 0.029708"
+        xyz="0.012221 0.029708 -0.0124"
         rpy="0 0 0" />
       <mass
         value="0.09598" />
       <inertia
-        ixx="3.2658E-05"
-        ixy="-1.2243E-06"
-        ixz="-1.4856E-06"
-        iyy="2.0828E-05"
-        iyz="-3.4986E-07"
-        izz="2.1794E-05" />
+        ixx="2.0828E-05"
+        ixy="-3.4986E-07"
+        ixz="-1.2243E-06"
+        iyy="2.1794E-05"
+        iyz="-1.4856E-06"
+        izz="3.2658E-05" />
     </inertial>
     <visual>
       <origin
@@ -88,14 +88,14 @@
     name="Joint_Shoulder_rf"
     type="revolute">
     <origin
-      xyz="0.0685 -0.019304 -0.034561"
-      rpy="-1.5708 0.034331 -1.5708" />
+      xyz="0.034561 0.0685 0.019304"
+      rpy="0 0.034331 0" />
     <parent
       link="base_link" />
     <child
       link="Link_Shoulder_rf" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 1 0" />
     <limit
       lower="1.5"
       upper="0.5"
