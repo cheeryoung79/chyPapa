@@ -8,16 +8,16 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.00036944 2.8765E-18 0.011864"
+        xyz="3.8858E-18 0.00036944 0.011864"
         rpy="0 0 0" />
       <mass
         value="0.30153" />
       <inertia
-        ixx="0.00035267"
-        ixy="-1.7197E-06"
-        ixz="-2.8624E-09"
-        iyy="0.00050692"
-        iyz="4.6735E-10"
+        ixx="0.00050692"
+        ixy="1.7197E-06"
+        ixz="4.6735E-10"
+        iyy="0.00035267"
+        iyz="2.8624E-09"
         izz="0.00062494" />
     </inertial>
     <visual>
@@ -45,20 +45,20 @@
     </collision>
   </link>
   <link
-    name="Link_Shoulder_rf">
+    name="Link_Shoulder_Rf">
     <inertial>
       <origin
-        xyz="0.012221 0.029708 -0.0124"
+        xyz="-0.011045 0.01355 -0.024641"
         rpy="0 0 0" />
       <mass
         value="0.09598" />
       <inertia
-        ixx="2.0828E-05"
-        ixy="-3.4986E-07"
-        ixz="-1.2243E-06"
-        iyy="2.1794E-05"
-        iyz="-1.4856E-06"
-        izz="3.2658E-05" />
+        ixx="2.0704E-05"
+        ixy="-1.4274E-07"
+        ixz="-4.8229E-07"
+        iyy="3.2782E-05"
+        iyz="-1.4481E-06"
+        izz="2.1794E-05" />
     </inertial>
     <visual>
       <origin
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder_rf.STL" />
+          filename="package://chyPapa5/meshes/Link_Shoulder_Rf.STL" />
       </geometry>
       <material
         name="">
@@ -80,22 +80,22 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder_rf.STL" />
+          filename="package://chyPapa5/meshes/Link_Shoulder_Rf.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint_Shoulder_rf"
+    name="Joint_Shoulder_Rf"
     type="revolute">
     <origin
-      xyz="0.034561 0.0685 0.019304"
-      rpy="0 0.034331 0" />
+      xyz="0.0725 -0.019304 -0.034561"
+      rpy="3.1416 -1.5708 0" />
     <parent
       link="base_link" />
     <child
-      link="Link_Shoulder_rf" />
+      link="Link_Shoulder_Rf" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 0 1" />
     <limit
       lower="1.5"
       upper="0.5"
