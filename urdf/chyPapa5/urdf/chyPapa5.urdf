@@ -8,16 +8,16 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-1.74347534149562E-17 0.000369441212972377 -0.011864156308418"
+        xyz="-1.20328311049649E-17 0.000369441212972375 -0.011864156308418"
         rpy="0 0 0" />
       <mass
         value="0.301530504160963" />
       <inertia
         ixx="0.000506923634750398"
-        ixy="-1.71966331110653E-06"
-        ixz="4.67346607232205E-10"
+        ixy="-1.71966331110652E-06"
+        ixz="4.67346607231123E-10"
         iyy="0.00035267121080194"
-        iyz="-2.86244231269509E-09"
+        iyz="-2.86244231269397E-09"
         izz="0.000624936520803351" />
     </inertial>
     <visual>
@@ -44,26 +44,8 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="Joint_Shoulder_rf"
-    type="revolute">
-    <origin
-      xyz="0.0725 0.019059 0.035943"
-      rpy="3.1416 1.5708 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="Link_Shoulder_rf" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="0.5"
-      upper="1.5"
-      effort="100"
-      velocity="0" />
-  </joint>
   <link
-    name="Link_Shoulder_rf">
+    name="link_shoulder_rf">
     <inertial>
       <origin
         xyz="-0.010359 -0.0125 0.029779"
@@ -84,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder_rf.STL" />
+          filename="package://chyPapa5/meshes/link_shoulder_rf.STL" />
       </geometry>
       <material
         name="">
@@ -98,12 +80,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://chyPapa5/meshes/Link_Shoulder_rf.STL" />
+          filename="package://chyPapa5/meshes/link_shoulder_rf.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint_Shoulder_rf"
+    name="joint_shoulder_rf"
     type="revolute">
     <origin
       xyz="0.0685 0.019059 0.035943"
@@ -111,12 +93,12 @@
     <parent
       link="base_link" />
     <child
-      link="Link_Shoulder_rf" />
+      link="link_shoulder_rf" />
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="0.5"
-      upper="1.5"
+      lower="1.5"
+      upper="0.5"
       effort="100"
       velocity="0" />
   </joint>
